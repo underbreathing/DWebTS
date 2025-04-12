@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "DWebTS"
 include(":app")
- 
+include(":core")
+include(":feature:home")
+include(":navigation")
+include(":feature:app_details")
