@@ -1,17 +1,16 @@
 package com.sheverdyaevartem.home.ui
 
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import com.sheverdyaevartem.core.di.AppProvider
 import com.sheverdyaevartem.core.ui.BaseInjectFragment
-import com.sheverdyaevartem.home.R
 import com.sheverdyaevartem.home.databinding.FragmentHomeBinding
-import com.sheverdyaevartem.navigation.Navigator
+import com.sheverdyaevartem.navigation.R
+
 
 class HomeFragment : BaseInjectFragment() {
 
@@ -50,9 +49,9 @@ class HomeFragment : BaseInjectFragment() {
         super.onStart()
 
         binding.btnToast.setOnClickListener {
-            (requireActivity() as Navigator).goto(
-                Uri.parse("DWebTS://details"),
-                com.sheverdyaevartem.navigation.R.navigation.main_graph
+            findNavController().navigate(
+                R.id.action_global_details_graph,
+                bundleOf(requireContext().getString(R.string.action_global_details_graph_key) to 4)
             )
         }
     }

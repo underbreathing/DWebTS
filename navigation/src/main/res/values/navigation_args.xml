@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_global_details_graph" type="id"/>
+    <string name="action_global_details_graph_key"/>
+
+</resources>
