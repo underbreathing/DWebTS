@@ -9,6 +9,8 @@
     <include app:graph="@navigation/home_graph" />
     <action
         android:id="@+id/action_global_details_graph"
-        app:destination="@id/details_graph" />
+        app:destination="@id/details_graph"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/stay_in_place" />
 
 </navigation>

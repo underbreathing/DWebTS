@@ -40,7 +40,6 @@ dependencies {
 
     implementation(project(":core"))
     implementation(project(":feature:home"))
-    implementation(project(":navigation"))
     implementation(project(":feature:app_details"))
 
     implementation(libs.retrofit)

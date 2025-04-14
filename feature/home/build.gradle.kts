@@ -38,8 +38,9 @@ android {
 
 dependencies {
 
-    implementation(project(":navigation"))
     implementation(project(":core"))
+
+    implementation (libs.glide)
 
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)

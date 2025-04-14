@@ -1,5 +1,6 @@
 [versions]
 compileSdk = "35"
+glide = "4.16.0"
 minSdk = "24"
 targetSdk = "34"
 agp = "8.7.3"
@@ -26,6 +27,7 @@ androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fr
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "daggerVersion" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerVersion" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

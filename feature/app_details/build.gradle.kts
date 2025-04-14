@@ -38,11 +38,12 @@ android {
 
 dependencies {
 
-    implementation(project(":navigation"))
     implementation(project(":core"))
 
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+
+    implementation(libs.glide)
 
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="84dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_gravity="center"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="12dp"
+        tools:src="@drawable/ic_app_placeholder"
+        />
+
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/label"
+        tools:text="Telegram"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="12dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
