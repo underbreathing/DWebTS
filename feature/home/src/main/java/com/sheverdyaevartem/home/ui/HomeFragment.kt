@@ -55,7 +55,10 @@ class HomeFragment : BaseInjectFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val filter = IntentFilter(Intent.ACTION_PACKAGE_ADDED).apply {
+        val filter = IntentFilter().apply {
+            addAction(Intent.ACTION_PACKAGE_ADDED)
+            addAction(Intent.ACTION_PACKAGE_REPLACED)
+            addAction(Intent.ACTION_PACKAGE_REMOVED)
             addDataScheme("package")
         }
         requireContext().registerReceiver(receiver, filter)

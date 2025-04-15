@@ -3,6 +3,7 @@ package com.sheverdyaevartem.home.ui
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import com.sheverdyaevartem.core.utils.log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -16,6 +17,7 @@ class ReceiverAppUpdates : BroadcastReceiver() {
                 || intent.action == Intent.ACTION_PACKAGE_REPLACED
                 || intent.action == Intent.ACTION_PACKAGE_REMOVED
             ) {
+                "Пришел интент: ${intent.action}".log()
                 CoroutineScope(Dispatchers.IO).launch {
                     notifyUpdate()
                 }
