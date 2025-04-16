@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="pm_button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="textAllCaps">false</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">500</item>
+        <item name="cornerRadius">54dp</item>
+        <item name="backgroundTint">@android:color/black</item>
+    </style>
+
+</resources>

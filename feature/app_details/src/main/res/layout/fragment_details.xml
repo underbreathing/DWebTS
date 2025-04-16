@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sheverdyaevartem.app_details.ui.AppDetailsFragment">
+
+    <Toolbar
+        android:id="@+id/toolbar_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="8dp"
+
+
+        android:navigationIcon="@drawable/ic_back_arrow"
+        android:titleTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true" />
+
+    <!-- Левый Guideline -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_back"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_app_placeholder" />
+
+    <!-- Правый Guideline -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <!-- Название -->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/details_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/iv_app_icon" />
+
+    <TextView
+        android:id="@+id/tv_details_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_name"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        tools:text="Telegram elegrammm sdfsdf asfdsfa sdf" />
+
+    <!-- Версия -->
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/details_version"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_details_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_version"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/tv_version"
+        app:layout_constraintTop_toTopOf="@id/tv_version"
+        tools:text="1.0" />
+
+    <!-- Имя пакета -->
+    <TextView
+        android:id="@+id/tv_package_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/details_package_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_version" />
+
+    <TextView
+        android:id="@+id/tv_details_package_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_package_name"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/tv_package_name"
+        app:layout_constraintTop_toTopOf="@id/tv_package_name"
+        tools:text="com.example.app" />
+
+    <!-- Контрольная сумма -->
+    <TextView
+        android:id="@+id/tv_checksum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/details_checksum"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_package_name" />
+
+    <TextView
+        android:id="@+id/tv_details_checksum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_checksum"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/tv_checksum"
+        app:layout_constraintTop_toTopOf="@id/tv_checksum"
+        tools:text="abcdef123456789088dvjhkvfdhvkf" />
+
+    <Button
+        android:id="@+id/b_launch"
+        style="@style/pm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"
+        android:maxHeight="36dp"
+        android:text="@string/details_button_launch"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_checksum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

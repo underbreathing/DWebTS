@@ -10,6 +10,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    plugins {
+        id("androidx.navigation.safeargs.kotlin") version "2.8.9"
+    }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -21,4 +24,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "DWebTS"
 include(":app")
- 
+include(":core")
+include(":feature:home")
+include(":feature:app_details")
+include(":database")
