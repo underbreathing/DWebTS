@@ -28,12 +28,9 @@ class HomeViewModel(
 
     val homeState: StateFlow<HomeState> get() = _homeState
 
-
-    private fun getApps() {
+    fun updateCache() {
         viewModelScope.launch(Dispatchers.IO) {
-            appsCacheInteractor.getAppsInfoCache().collect { listAppInfo: List<AppMetaInfo> ->
-                _homeState.emit(HomeState.Content(listAppInfo))
-            }
+            appsCacheInteractor.updateAppsInfo(getAppsUseCase())
         }
     }
 
@@ -51,9 +48,11 @@ class HomeViewModel(
         }
     }
 
-    private fun updateCache() {
+    private fun getApps() {
         viewModelScope.launch(Dispatchers.IO) {
-            appsCacheInteractor.updateAppsInfo(getAppsUseCase())
+            appsCacheInteractor.getAppsInfoCache().collect { listAppInfo: List<AppMetaInfo> ->
+                _homeState.emit(HomeState.Content(listAppInfo))
+            }
         }
     }
 }

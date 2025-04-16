@@ -77,6 +77,7 @@ class HomeFragment : BaseInjectFragment() {
         lifecycleScope.launch {
             ReceiverAppUpdates.updatesFlow.collect {
                 "Надо перерисовывать список!!!!!!!!!!!!!!!!!!!".log()
+                homeViewModel.updateCache()
             }
         }
 
