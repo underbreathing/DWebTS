@@ -10,9 +10,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.sheverdyaevartem.app_details.R
 import com.sheverdyaevartem.app_details.databinding.FragmentDetailsBinding
-import com.sheverdyaevartem.core.di.AppProvider
+import com.sheverdyaevartem.core.di.AndroidDepsProvider
 import com.sheverdyaevartem.core.ui.BaseInjectFragment
 import java.io.FileInputStream
 import java.security.MessageDigest
@@ -23,7 +22,7 @@ class AppDetailsFragment : BaseInjectFragment() {
     private val binding get() = _binding!!
     private var navController: NavController? = null
 
-    override fun inject(appProvider: AppProvider) {
+    override fun inject(androidDepsProvider: AndroidDepsProvider) {
 
     }
 

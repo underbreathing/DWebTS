@@ -1,4 +1,4 @@
-package com.sheverdyaevartem.home.ui
+package com.sheverdyaevartem.home.presentation
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -18,6 +18,7 @@ class ReceiverAppUpdates : BroadcastReceiver() {
                 || intent.action == Intent.ACTION_PACKAGE_REMOVED
             ) {
                 "Пришел интент: ${intent.action}".log()
+                "Пакет удаленного приложения: ${intent.data?.schemeSpecificPart}"
                 CoroutineScope(Dispatchers.IO).launch {
                     notifyUpdate()
                 }

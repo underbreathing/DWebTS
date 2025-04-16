@@ -42,9 +42,6 @@ dependencies {
     implementation(project(":feature:home"))
     implementation(project(":feature:app_details"))
 
-    implementation(libs.retrofit)
-    implementation(libs.kotlinx.serialization.json)
-
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 

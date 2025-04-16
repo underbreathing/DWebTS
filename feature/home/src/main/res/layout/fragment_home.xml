@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.sheverdyaevartem.home.ui.HomeFragment">
+    tools:context="com.sheverdyaevartem.home.presentation.HomeFragment">
 
     <Toolbar
         android:id="@+id/title"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:elevation="8dp"
-        android:title="Приложения"
+        android:title="@string/home_label"
         android:titleTextColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

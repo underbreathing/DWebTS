@@ -3,7 +3,7 @@ package com.sheverdyaevartem.core.ui
 import android.content.Context
 import androidx.fragment.app.Fragment
 import com.sheverdyaevartem.core.di.App
-import com.sheverdyaevartem.core.di.AppProvider
+import com.sheverdyaevartem.core.di.AndroidDepsProvider
 
 abstract class BaseInjectFragment : Fragment() {
 
@@ -12,6 +12,6 @@ abstract class BaseInjectFragment : Fragment() {
         super.onAttach(context)
     }
 
-    abstract fun inject(appProvider: AppProvider)
+    abstract fun inject(androidDepsProvider: AndroidDepsProvider)
 
 }

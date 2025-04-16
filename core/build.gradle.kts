@@ -38,8 +38,6 @@ dependencies {
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 
-    implementation(libs.converter.gson)
-    implementation(libs.retrofit)
     implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.androidx.core.ktx)

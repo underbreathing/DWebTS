@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sheverdyaevartem.app_details"
+    namespace = "com.sheverdyaevartem.database"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -31,26 +31,17 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures{
-        viewBinding = true
-    }
 }
 
 dependencies {
 
-    implementation(project(":core"))
-
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+
 
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
-
-    implementation(libs.glide)
-
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

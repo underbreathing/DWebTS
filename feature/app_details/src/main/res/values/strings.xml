@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="details_name">Название:</string>
+    <string name="details_version">Версия:</string>
+    <string name="details_package_name">Имя пакета:</string>
+    <string name="details_checksum">Контрольная сумма:</string>
+    <string name="details_button_launch">Запустить</string>
+</resources>
