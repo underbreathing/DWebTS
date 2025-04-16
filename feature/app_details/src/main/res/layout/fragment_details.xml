@@ -170,13 +170,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="24dp"
         android:maxHeight="36dp"
         android:text="@string/details_button_launch"
         app:layout_constraintEnd_toStartOf="@id/guide_right"
         app:layout_constraintStart_toEndOf="@id/guide_left"
-        app:layout_constraintTop_toBottomOf="@id/tv_details_checksum" />
+        app:layout_constraintTop_toBottomOf="@id/tv_checksum" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

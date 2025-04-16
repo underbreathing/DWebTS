@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
-class HomeViewModel @Inject constructor(
+class HomeViewModel(
     private val getAppsUseCase: GetAppsUseCase,
     private val appsCacheInteractor: AppsCacheInteractor,
 ) :
